@@ -85,7 +85,7 @@ export default function Create() {
       inputValue: 'My Custom Board',
       showCancelButton: true,
       background: 'var(--alert-bg)',
-      color: 'white',
+      color: 'blue',
       inputValidator: (value) => {
         if (!value) return 'You need to write something!'
       }

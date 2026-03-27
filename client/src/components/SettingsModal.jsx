@@ -27,7 +27,7 @@ export default function SettingsModal({
           <X size={20} />
         </button>
 
-        <h2 style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'currentcolor' }}><Settings size={20} /> Settings & Stats</h2>
+        <h2 style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'currentcolor' }}> Settings & Stats</h2>
         
         <div style={{ background: 'var(--alert-bg)', border: '1px solid var(--glass-border)', padding: '1rem', borderRadius: '12px', marginBottom: '1rem' }}>
           <h3 style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '1.1rem', marginBottom: '0.5rem', color: 'currentcolor' }}><Trophy size={16}/> Career Leaderboard</h3>
@@ -39,7 +39,7 @@ export default function SettingsModal({
 
         <div style={{ background: 'var(--alert-bg)', border: '1px solid var(--glass-border)', padding: '1rem', borderRadius: '12px', marginBottom: '1rem' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.8rem' }}>
-            <span style={{ fontSize: '0.9rem', color: 'currentcolor' }}>Theme</span>
+            <span style={{ fontSize: '0.9rem', color: 'currentcolor' }}>Dark Mode</span>
             <button 
               className="btn btn-secondary" 
               style={{ padding: '0.3rem 0.8rem' }}

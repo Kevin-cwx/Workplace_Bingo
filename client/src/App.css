@@ -4,8 +4,8 @@
   --bg-dark: #030712;
   --glass-bg: rgba(17, 25, 40, 0.6);
   --glass-border: rgba(255, 255, 255, 0.08);
-  --primary: #8b5cf6;
-  --primary-hover: #7c3aed;
+  --primary: #3256d6;
+  --primary-hover: #3aed55;
   --secondary: #10b981;
   --text-main: #f8fafc;
   --text-muted: #94a3b8;
@@ -56,7 +56,7 @@ body {
   font-weight: 800;
   letter-spacing: -0.05em;
   margin-bottom: clamp(0.2rem, 1vh, 1rem);
-  background: linear-gradient(135deg, #e2e8f0 0%, #a78bfa 50%, #34d399 100%);
+  background: linear-gradient(135deg, #6937fc 0%, #a78bfa 50%, #34d399 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -142,7 +142,7 @@ h1, h2, h3 {
   padding: 0.6rem 1rem;
   border-radius: 10px;
   font-family: inherit;
-  font-size: 0.9rem;
+  font-size: 5rem;
   width: 100%;
   transition: all 0.2s;
   outline: none;
