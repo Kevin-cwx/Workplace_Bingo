@@ -71,7 +71,7 @@ export default function Game() {
         title: 'Oops...',
         text: message,
         background: 'var(--alert-bg)',
-        color: 'white',
+        color: 'var(--text-main)',
         confirmButtonColor: 'var(--danger)',
         timer: 2000
       });
@@ -97,7 +97,7 @@ export default function Game() {
         confirmButtonText: 'Yes, Unclaim!',
         cancelButtonText: 'No, Keep it!',
         background: 'var(--alert-bg)',
-        color: 'white',
+        color: 'var(--text-main)',
         timer: 14000
       }).then((result) => {
         const vote = result.isConfirmed;
@@ -107,9 +107,9 @@ export default function Game() {
 
     socket.on('disputeResult', ({ success, cellText }) => {
       if (success) {
-        Swal.fire({ title: 'Dispute Accepted', text: `"${cellText}" has been unclaimed.`, icon: 'success', toast: true, position: 'top', timer: 3000, background: 'var(--alert-bg)', color: 'white' });
+        Swal.fire({ title: 'Dispute Accepted', text: `"${cellText}" has been unclaimed.`, icon: 'success', toast: true, position: 'top', timer: 3000, background: 'var(--alert-bg)', color: 'var(--text-main)' });
       } else {
-        Swal.fire({ title: 'Dispute Rejected', text: `The claim on "${cellText}" remains.`, icon: 'info', toast: true, position: 'top', timer: 3000, background: 'var(--alert-bg)', color: 'white' });
+        Swal.fire({ title: 'Dispute Rejected', text: `The claim on "${cellText}" remains.`, icon: 'info', toast: true, position: 'top', timer: 3000, background: 'var(--alert-bg)', color: 'var(--text-main)' });
       }
     });
 
@@ -135,7 +135,7 @@ export default function Game() {
           title: 'Too slow!',
           text: 'Another person already clicked it!',
           background: 'var(--alert-bg)',
-          color: 'white',
+          color: 'var(--text-main)',
           confirmButtonColor: 'var(--danger)'
         });
         return;
@@ -166,7 +166,7 @@ export default function Game() {
       confirmButtonColor: 'var(--danger)',
       confirmButtonText: 'Initiate Dispute',
       background: 'var(--alert-bg)',
-      color: 'white'
+      color: 'var(--text-main)'
     }).then(res => {
       if (res.isConfirmed) {
         socket.emit('initiateDispute', { gameId, cellId });
@@ -186,7 +186,7 @@ export default function Game() {
       showConfirmButton: false,
       timer: 1500,
       background: 'var(--alert-bg)',
-      color: 'white'
+      color: 'var(--text-main)'
     });
   };
 
@@ -270,7 +270,7 @@ export default function Game() {
               icon: 'question',
               showCancelButton: true,
               background: 'var(--alert-bg)',
-              color: 'white'
+              color: 'var(--text-main)'
             }).then(res => {
               if (res.isConfirmed) {
                 socket.disconnect();
@@ -395,7 +395,7 @@ export default function Game() {
                 border: `2px solid ${winner.color}`,
                 textAlign: 'center',
                 boxShadow: `0 20px 50px ${winner.color}44`,
-                color: 'white',
+                color: 'var(--text-main)',
                 maxWidth: '90%',
                 width: '500px'
               }}
@@ -421,7 +421,7 @@ export default function Game() {
               </motion.div>
               <h1 className="title-gradient" style={{ fontSize: '3.5rem', marginBottom: '1rem', lineHeight: 1.1 }}>Game Over!</h1>
               <h2 style={{ fontSize: '1.5rem', color: '#cbd5e1' }}>
-                <strong style={{ color: 'white', fontSize: '2rem' }}>{winner.name}</strong> wins with {winner.score} points!
+                <strong style={{ color: 'var(--text-main)', fontSize: '2rem' }}>{winner.name}</strong> wins with {winner.score} points!
               </h2>
               
               <div style={{ marginTop: '3rem', position: 'relative', zIndex: 10001 }}>

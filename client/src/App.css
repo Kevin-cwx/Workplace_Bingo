@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
 :root {
-  --bg-dark: #030712;
-  --glass-bg: rgba(17, 25, 40, 0.6);
+  --bg-dark: #0f0707;
+  --glass-bg: rgba(26, 10, 10, 0.7);
   --glass-border: rgba(255, 255, 255, 0.08);
-  --primary: #3256d6;
-  --primary-hover: #3aed55;
-  --secondary: #10b981;
+  --primary: #ef4444;
+  --primary-hover: #f87171;
+  --secondary: #f59e0b;
   --text-main: #f8fafc;
   --text-muted: #94a3b8;
-  --danger: #ef4444;
-  --alert-bg: #1e293b;
+  --danger: #dc2626;
+  --alert-bg: #1e1111;
 }
 
 * {
@@ -23,8 +23,8 @@ body {
   font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
   background-color: var(--bg-dark);
   background-image: 
-    radial-gradient(circle at 15% 50%, rgba(139, 92, 246, 0.15), transparent 25%),
-    radial-gradient(circle at 85% 30%, rgba(16, 185, 129, 0.15), transparent 25%);
+    radial-gradient(circle at 15% 50%, rgba(239, 68, 68, 0.15), transparent 25%),
+    radial-gradient(circle at 85% 30%, rgba(245, 158, 11, 0.15), transparent 25%);
   color: var(--text-main);
   height: 100vh;
   margin: 0;
@@ -56,13 +56,13 @@ body {
   font-weight: 800;
   letter-spacing: -0.05em;
   margin-bottom: clamp(0.2rem, 1vh, 1rem);
-  background: linear-gradient(135deg, #6937fc 0%, #a78bfa 50%, #34d399 100%);
+  background: linear-gradient(135deg, #ef4444 0%, #f97316 50%, #eab308 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   line-height: 1.1;
   text-align: center;
-  filter: drop-shadow(0px 4px 20px rgba(139, 92, 246, 0.25));
+  filter: drop-shadow(0px 4px 20px rgba(239, 68, 68, 0.25));
   flex-shrink: 0;
 }
 
@@ -86,7 +86,7 @@ body {
 
 .glass-panel:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 40px rgba(139, 92, 246, 0.2);
+  box-shadow: 0 12px 40px rgba(239, 68, 68, 0.2);
 }
 
 h1, h2, h3 {
@@ -109,13 +109,13 @@ h1, h2, h3 {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  box-shadow: 0 4px 14px 0 rgba(139, 92, 246, 0.39);
+  box-shadow: 0 4px 14px 0 rgba(239, 68, 68, 0.39);
 }
 
 .btn:hover {
   background: var(--primary-hover);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(139, 92, 246, 0.5);
+  box-shadow: 0 6px 20px rgba(239, 68, 68, 0.5);
 }
 
 .btn:active {
@@ -151,8 +151,8 @@ h1, h2, h3 {
 
 .input-field:focus {
   border-color: var(--primary);
-  background: rgba(15, 23, 42, 0.8);
-  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.25);
+  background: rgba(40, 15, 15, 0.8);
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.25);
 }
 
 /* Board Styles */
@@ -339,12 +339,12 @@ input[type="color"]::-webkit-color-swatch {
 /* SweetAlert customization */
 .swal2-popup {
   background: var(--alert-bg) !important;
-  color: white !important;
+  color: var(--text-main) !important;
   border: 1px solid var(--glass-border);
   border-radius: 20px !important;
 }
 .swal2-title, .swal2-html-container {
-  color: white !important;
+  color: var(--text-main) !important;
 }
 
 /* Big Input Fields */
@@ -395,8 +395,8 @@ input[type="color"]::-webkit-color-swatch {
 
 .selected-board {
   border-color: var(--primary);
-  background: rgba(139, 92, 246, 0.2) !important;
-  box-shadow: 0 0 15px rgba(139, 92, 246, 0.3);
+  background: rgba(239, 68, 68, 0.2) !important;
+  box-shadow: 0 0 15px rgba(239, 68, 68, 0.3);
 }
 
 .game-layout {
@@ -482,7 +482,7 @@ input[type="color"]::-webkit-color-swatch {
 }
 
 [data-theme="light"] .title-gradient {
-  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #059669 100%);
+  background: linear-gradient(135deg, #dc2626 0%, #ea580c 50%, #ca8a04 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;

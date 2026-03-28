@@ -74,10 +74,10 @@ export default function Home() {
 
   const joinGame = () => {
     if (!user.name) {
-      return Swal.fire({ icon: 'warning', title: 'Missing Username', text: 'Please enter username', background: 'var(--alert-bg)', color: 'white' });
+      return Swal.fire({ icon: 'warning', title: 'Missing Username', text: 'Please enter username', background: 'var(--alert-bg)', color: 'var(--text-main)' });
     }
     if (!gameId) {
-      return Swal.fire({ icon: 'warning', title: 'Missing Game ID', text: 'Please enter a Game ID', background: 'var(--alert-bg)', color: 'white' });
+      return Swal.fire({ icon: 'warning', title: 'Missing Game ID', text: 'Please enter a Game ID', background: 'var(--alert-bg)', color: 'var(--text-main)' });
     }
     navigate(`/game/${gameId}`);
   };
@@ -140,9 +140,9 @@ export default function Home() {
 
       <div style={{ height: '1px', background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent)', margin: '1.5rem 0', flexShrink: 0 }} />
       
-      <button className="btn" style={{ width: '100%', padding: '0.8rem', fontSize: '1.1rem', marginBottom: '1rem', boxShadow: '0 8px 20px rgba(139, 92, 246, 0.4)' }} onClick={() => {
+      <button className="btn" style={{ width: '100%', padding: '0.8rem', fontSize: '1.1rem', marginBottom: '1rem' }} onClick={() => {
         if (!user.name) {
-          return Swal.fire({ icon: 'warning', title: 'Missing Username', text: 'Please enter username', background: 'var(--alert-bg)', color: 'white' });
+          return Swal.fire({ icon: 'warning', title: 'Missing Username', text: 'Please enter username', background: 'var(--alert-bg)', color: 'var(--text-main)' });
         }
         navigate('/create');
       }}>

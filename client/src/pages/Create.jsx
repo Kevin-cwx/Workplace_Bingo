@@ -75,7 +75,7 @@ export default function Create() {
 
   const saveCurrentBoard = async () => {
     if (cells.some(c => !c.trim())) {
-      return Swal.fire({ icon: 'error', title: 'Empty Cells', text: 'Fill all cells before saving.', background: 'var(--alert-bg)' });
+      return Swal.fire({ icon: 'error', title: 'Empty Cells', text: 'Fill all cells before saving.', background: 'var(--alert-bg)', color: 'var(--text-main)' });
     }
     
     const { value: name } = await Swal.fire({
@@ -85,7 +85,7 @@ export default function Create() {
       inputValue: 'My Custom Board',
       showCancelButton: true,
       background: 'var(--alert-bg)',
-      color: 'blue',
+      color: 'var(--text-main)',
       inputValidator: (value) => {
         if (!value) return 'You need to write something!'
       }
@@ -98,15 +98,15 @@ export default function Create() {
     setSavedBoards(updated);
     localStorage.setItem('bingoSavedBoards', JSON.stringify(updated));
     setSelectedBoardId(newBoard.id);
-    Swal.fire({ icon: 'success', title: 'Saved!', toast: true, position: 'top', showConfirmButton: false, timer: 1500, background: 'var(--alert-bg)' });
+    Swal.fire({ icon: 'success', title: 'Saved!', toast: true, position: 'top', showConfirmButton: false, timer: 1500, background: 'var(--alert-bg)', color: 'var(--text-main)' });
   };
 
   const createGame = () => {
     if (cells.length < 9) {
-      return Swal.fire({ icon: 'error', title: 'Too small', text: 'Minimum 9 cells required.', background: 'var(--alert-bg)' });
+      return Swal.fire({ icon: 'error', title: 'Too small', text: 'Minimum 9 cells required.', background: 'var(--alert-bg)', color: 'var(--text-main)' });
     }
     if (cells.some(c => !c.trim())) {
-      return Swal.fire({ icon: 'error', title: 'Empty Cells', text: 'Please fill in all cells', background: 'var(--alert-bg)' });
+      return Swal.fire({ icon: 'error', title: 'Empty Cells', text: 'Please fill in all cells', background: 'var(--alert-bg)', color: 'var(--text-main)' });
     }
     const generateCode = () => {
       const C = 'BCDFGHJKLMNPRSTVWZ';
